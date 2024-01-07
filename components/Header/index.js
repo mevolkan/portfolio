@@ -76,9 +76,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
                   {showResume && (
                     <Button
-                      onClick={() =>
-                        window.open("mailto:nzaro19@gmail.com")
-                      }
+                      onClick={() => window.open("mailto:nzaro19@gmail.com")}
                     >
                       Resume
                     </Button>
