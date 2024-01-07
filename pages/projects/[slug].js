@@ -12,7 +12,7 @@ import { useRouter } from "next/router";
 import Cursor from "../../components/Cursor";
 import data from "../../data/portfolio.json";
 
-const BlogPost = ({ post }) => {
+const Project = ({ post }) => {
   const [showEditor, setShowEditor] = useState(false);
   const textOne = useRef();
   const textTwo = useRef();
@@ -25,7 +25,7 @@ const BlogPost = ({ post }) => {
   return (
     <>
       <Head>
-        <title>{"Blog - " + post.title}</title>
+        <title>{"Project - " + post.title}</title>
         <meta name="description" content={post.preview} />
       </Head>
       {data.showCursor && <Cursor />}
@@ -36,9 +36,9 @@ const BlogPost = ({ post }) => {
         }`}
       >
         <Header isBlog={true} />
-        <div className="mt-10 flex flex-col">
+        <div className="flex flex-col mt-10">
           <img
-            className="w-full h-96 rounded-lg shadow-lg object-cover"
+            className="object-cover w-full rounded-lg shadow-lg h-96"
             src={post.image}
             alt={post.title}
           ></img>
@@ -50,7 +50,7 @@ const BlogPost = ({ post }) => {
           </h1>
           <h2
             ref={textTwo}
-            className="mt-2 text-xl max-w-4xl text-darkgray opacity-50"
+            className="max-w-4xl mt-2 text-xl opacity-50 text-darkgray"
           >
             {post.tagline}
           </h2>
@@ -112,4 +112,4 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
-export default BlogPost;
+export default Project;
