@@ -22,14 +22,6 @@ const Footer = ({}) => {
         </div>
       </div>
     </div>
-    <h1 className="p-2 mt-2 text-sm text-bold laptop:mt-10 laptop:p-0">
-      Made With ❤ by{" "}
-      <Link
-        href="https://nzaro.netlify.app/"
-        className="underline underline-offset-1">
-        Samuel Nzaro
-      </Link>
-    </h1>
   </>;
 };
 
