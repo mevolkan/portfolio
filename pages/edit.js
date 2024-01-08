@@ -152,7 +152,7 @@ const Edit = () => {
       <Header isBlog></Header>
       {data.showCursor && <Cursor />}
       <div className="mt-10">
-        <div className={`${theme === "dark" ? "bg-transparent" : "bg-white"}`}>
+        <div className={`${theme === "dark" ? "bg-transparent" : "bg-transparent"}`}>
           <div className="flex items-center justify-between">
             <h1 className="text-4xl">Dashboard</h1>
             <div className="flex items-center">
@@ -413,6 +413,20 @@ const Edit = () => {
                         editProjects(index, {
                           ...project,
                           url: e.target.value,
+                        })
+                      }
+                      className="w-4/5 p-2 ml-10 border-2 rounded-md shadow-lg"
+                      type="text"
+                    ></input>
+                  </div>
+                  <div className="flex items-center mt-2">
+                    <label className="w-1/5 text-lg opacity-50">technologies</label>
+                    <input
+                      value={project.technologies}
+                      onChange={(e) =>
+                        editProjects(index, {
+                          ...project,
+                          technologies: e.target.value,
                         })
                       }
                       className="w-4/5 p-2 ml-10 border-2 rounded-md shadow-lg"
