@@ -9,13 +9,14 @@ const WorkCard = ({ img, name, description, technologies, onClick }) => {
     >
       <div
         className="relative h-48 overflow-hidden transition-all duration-300 ease-out rounded-lg mob:h-auto"
-        style={{ height: "600px" }}
+        style={{ height: "300px" }}
       >
         <Image
           alt={name}
           className="object-cover w-full h-full transition-all duration-300 ease-out hover:scale-110"
           src={`/images/${img}.png`}
-          fill=""
+          layout="fill"
+          objectFit="cover"
         />
       </div>
       <h1 className="mt-5 text-3xl font-medium">
