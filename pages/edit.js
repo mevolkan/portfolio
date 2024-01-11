@@ -420,6 +420,20 @@ const Edit = () => {
                     ></input>
                   </div>
                   <div className="flex items-center mt-2">
+                    <label className="w-1/5 text-lg opacity-50">year</label>
+                    <input
+                      value={project.year}
+                      onChange={(e) =>
+                        editProjects(index, {
+                          ...project,
+                          year: e.target.value,
+                        })
+                      }
+                      className="w-4/5 p-2 ml-10 border-2 rounded-md shadow-lg"
+                      type="text"
+                    ></input>
+                  </div>
+                  <div className="flex items-center mt-2">
                     <label className="w-1/5 text-lg opacity-50">technologies</label>
                     <input
                       value={project.technologies}
