@@ -26,6 +26,7 @@ const WorkCard = ({ img, name, description, technologies, onClick }) => {
         {description ? description : "Description"}
       </h2>
       <p>{technologies? technologies : "Technologies"}</p>
+      <span onClick={onClick}>🔗  {name ? name : "#"}</span>
     </div>
   );
 };
