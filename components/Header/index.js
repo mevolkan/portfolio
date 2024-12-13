@@ -177,6 +177,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             <Button onClick={() => window.open("mailto:nzaro19@gmail.com")}>
               Contact
             </Button>
+            <Button onClick={() => router.push("/slides/WordCamp.pdf")} target="_blank" >
+
+              Slides
+            </Button>
 
             {mounted && theme && data.darkMode && (
               <Button
